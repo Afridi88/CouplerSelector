@@ -153,7 +153,7 @@
 
 const database = [
 
-{ lookupKey:"405 nm|1.8 mm|Flat", wavelength:"405 nm", ferrule:"1.8 mm", endface:"Flat", coupler:"", comments:"" },
+{ lookupKey:"405 nm|1.8 mm|Flat", wavelength:"405 nm", ferrule:"1.8 mm", endface:"Flat", coupler:"SN:86-01", comments:"" },
 { lookupKey:"405 nm|1.8 mm|Angled", wavelength:"405 nm", ferrule:"1.8 mm", endface:"Angled", coupler:"", comments:"" },
 { lookupKey:"405 nm|1.8 mm|Endcap Flat", wavelength:"405 nm", ferrule:"1.8 mm", endface:"Endcap Flat", coupler:"", comments:"" },
 { lookupKey:"405 nm|1.8 mm|Endcap Angle", wavelength:"405 nm", ferrule:"1.8 mm", endface:"Endcap Angle", coupler:"SN:54-01", comments:"" },
@@ -165,47 +165,42 @@ const database = [
 
 { lookupKey:"405 nm|2.5 mm|Flat", wavelength:"405 nm", ferrule:"2.5 mm", endface:"Flat", coupler:"", comments:"" },
 { lookupKey:"405 nm|2.5 mm|Angled", wavelength:"405 nm", ferrule:"2.5 mm", endface:"Angled", coupler:"", comments:"" },
-{ lookupKey:"405 nm|2.5 mm|Endcap Flat", wavelength:"405 nm", ferrule:"2.5 mm", endface:"Endcap Flat", coupler:"SN:37-01, SN:56-01", comments:"" },
+{ lookupKey:"405 nm|2.5 mm|Endcap Flat", wavelength:"405 nm", ferrule:"2.5 mm", endface:"Endcap Flat", coupler:"SN:37-01, SN:56-01", comments:"37-01 works well for air gap angle endcap laser." },
 { lookupKey:"405 nm|2.5 mm|Endcap Angle", wavelength:"405 nm", ferrule:"2.5 mm", endface:"Endcap Angle", coupler:"SN:55-01", comments:"" },
 
-{ lookupKey:"405 nm|3-3.2 mm|Flat", wavelength:"405 nm", ferrule:"3-3.2 mm", endface:"Flat", coupler:"SN:55-01", comments:"" },
-{ lookupKey:"405 nm|3-3.2 mm|Angled", wavelength:"405 nm", ferrule:"3-3.2 mm", endface:"Angled", coupler:"SN:55-01", comments:"" },
-{ lookupKey:"405 nm|3-3.2 mm|Endcap Flat", wavelength:"405 nm", ferrule:"3-3.2 mm", endface:"Endcap Flat", coupler:"SN:55-01", comments:"" },
-{ lookupKey:"405 nm|3-3.2 mm|Endcap Angle", wavelength:"405 nm", ferrule:"3-3.2 mm", endface:"Endcap Angle", coupler:"SN:55-01", comments:"" },
+{ lookupKey:"405 nm|3-3.2 mm|Flat", wavelength:"405 nm", ferrule:"3-3.2 mm", endface:"Flat", coupler:"SN:37-02", comments:"" },
+{ lookupKey:"405 nm|3-3.2 mm|Angled", wavelength:"405 nm", ferrule:"3-3.2 mm", endface:"Angled", coupler:"SN:37-02", comments:"" },
+{ lookupKey:"405 nm|3-3.2 mm|Endcap Flat", wavelength:"405 nm", ferrule:"3-3.2 mm", endface:"Endcap Flat", coupler:"SN:37-02", comments:"" },
+{ lookupKey:"405 nm|3-3.2 mm|Endcap Angle", wavelength:"405 nm", ferrule:"3-3.2 mm", endface:"Endcap Angle", coupler:"SN:37-02", comments:"" },
 
-{ lookupKey:"405 nm|3-3.2 mm|Flat", wavelength:"405 nm", ferrule:"3-3.2 mm", endface:"Flat", coupler:"SN:55-01", comments:"" },
-{ lookupKey:"405 nm|3-3.2 mm|Angled", wavelength:"405 nm", ferrule:"3-3.2 mm", endface:"Angled", coupler:"SN:55-01", comments:"" },
-{ lookupKey:"405 nm|3-3.2 mm|Endcap Flat", wavelength:"405 nm", ferrule:"3-3.2 mm", endface:"Endcap Flat", coupler:"SN:55-01", comments:"" },
-{ lookupKey:"405 nm|3-3.2 mm|Endcap Angle", wavelength:"405 nm", ferrule:"3-3.2 mm", endface:"Endcap Angle", coupler:"SN:55-01", comments:"" },
-
-{ lookupKey:"488 nm|1.8 mm|Flat", wavelength:"488 nm", ferrule:"1.8 mm", endface:"Flat", coupler:"", comments:"" },
+{ lookupKey:"488 nm|1.8 mm|Flat", wavelength:"488 nm", ferrule:"1.8 mm", endface:"Flat", coupler:"SN: 38-03,SN: 31-01,SN:31-02,SN:32-02", comments:"SN: 38-02 works well for air gap angle endcap laser, also 36-02, SN:31-02, 32-02" },
 { lookupKey:"488 nm|1.8 mm|Angled", wavelength:"488 nm", ferrule:"1.8 mm", endface:"Angled", coupler:"", comments:"" },
 { lookupKey:"488 nm|1.8 mm|Endcap Flat", wavelength:"488 nm", ferrule:"1.8 mm", endface:"Endcap Flat", coupler:"", comments:"" },
 { lookupKey:"488 nm|1.8 mm|Endcap Angle", wavelength:"488 nm", ferrule:"1.8 mm", endface:"Endcap Angle", coupler:"", comments:"" },
 
-{ lookupKey:"488 nm|FC|Flat", wavelength:"488 nm", ferrule:"FC", endface:"Flat", coupler:"", comments:"" },
-{ lookupKey:"488 nm|FC|Angled", wavelength:"488 nm", ferrule:"FC", endface:"Angled", coupler:"", comments:"" },
-{ lookupKey:"488 nm|FC|Endcap Flat", wavelength:"488 nm", ferrule:"FC", endface:"Endcap Flat", coupler:"", comments:"" },
+{ lookupKey:"488 nm|FC|Flat", wavelength:"488 nm", ferrule:"FC", endface:"Flat", coupler:"SN:93-1R3(S)", comments:"" },
+{ lookupKey:"488 nm|FC|Angled", wavelength:"488 nm", ferrule:"FC", endface:"Angled", coupler:"SN:50-02(S)", comments:"" },
+{ lookupKey:"488 nm|FC|Endcap Flat", wavelength:"488 nm", ferrule:"FC", endface:"Endcap Flat", coupler:"SN:93-1R3(S)", comments:"" },
 { lookupKey:"488 nm|FC|Endcap Angle", wavelength:"488 nm", ferrule:"FC", endface:"Endcap Angle", coupler:"", comments:"" },
 
-{ lookupKey:"488 nm|2.5 mm|Flat", wavelength:"488 nm", ferrule:"2.5 mm", endface:"Flat", coupler:"", comments:"" },
+{ lookupKey:"488 nm|2.5 mm|Flat", wavelength:"488 nm", ferrule:"2.5 mm", endface:"Flat", coupler:"SN: 67-02, SN:36-01, SN: 38-02, SN:36-02", comments:"SN:36-02 sent for repair. " },
 { lookupKey:"488 nm|2.5 mm|Angled", wavelength:"488 nm", ferrule:"2.5 mm", endface:"Angled", coupler:"", comments:"" },
 { lookupKey:"488 nm|2.5 mm|Endcap Flat", wavelength:"488 nm", ferrule:"2.5 mm", endface:"Endcap Flat", coupler:"", comments:"" },
 { lookupKey:"488 nm|2.5 mm|Endcap Angle", wavelength:"488 nm", ferrule:"2.5 mm", endface:"Endcap Angle", coupler:"", comments:"" },
 
-{ lookupKey:"488 nm|3-3.2 mm|Flat", wavelength:"488 nm", ferrule:"3-3.2 mm", endface:"Flat", coupler:"", comments:"" },
-{ lookupKey:"488 nm|3-3.2 mm|Angled", wavelength:"488 nm", ferrule:"3-3.2 mm", endface:"Angled", coupler:"", comments:"" },
-{ lookupKey:"488 nm|3-3.2 mm|Endcap Flat", wavelength:"488 nm", ferrule:"3-3.2 mm", endface:"Endcap Flat", coupler:"", comments:"" },
-{ lookupKey:"488 nm|3-3.2 mm|Endcap Angle", wavelength:"488 nm", ferrule:"3-3.2 mm", endface:"Endcap Angle", coupler:"", comments:"" },
+{ lookupKey:"488 nm|3-3.2 mm|Flat", wavelength:"488 nm", ferrule:"3-3.2 mm", endface:"Flat", coupler:"SN:35-01", comments:"" },
+{ lookupKey:"488 nm|3-3.2 mm|Angled", wavelength:"488 nm", ferrule:"3-3.2 mm", endface:"Angled", coupler:"", comments:"SN:35-01" },
+{ lookupKey:"488 nm|3-3.2 mm|Endcap Flat", wavelength:"488 nm", ferrule:"3-3.2 mm", endface:"Endcap Flat", coupler:"", comments:"SN:35-01" },
+{ lookupKey:"488 nm|3-3.2 mm|Endcap Angle", wavelength:"488 nm", ferrule:"3-3.2 mm", endface:"Endcap Angle", coupler:"", comments:"SN:35-01" },
 
-{ lookupKey:"400-700 nm|1.8 mm|Flat", wavelength:"400-700 nm", ferrule:"1.8 mm", endface:"Flat", coupler:"", comments:"" },
+{ lookupKey:"400-700 nm|1.8 mm|Flat", wavelength:"400-700 nm", ferrule:"1.8 mm", endface:"Flat", coupler:"SN:71-1R", comments:"" },
 { lookupKey:"400-700 nm|1.8 mm|Angled", wavelength:"400-700 nm", ferrule:"1.8 mm", endface:"Angled", coupler:"", comments:"" },
 { lookupKey:"400-700 nm|1.8 mm|Endcap Flat", wavelength:"400-700 nm", ferrule:"1.8 mm", endface:"Endcap Flat", coupler:"", comments:"" },
 { lookupKey:"400-700 nm|1.8 mm|Endcap Angle", wavelength:"400-700 nm", ferrule:"1.8 mm", endface:"Endcap Angle", coupler:"", comments:"" },
 
 { lookupKey:"400-700 nm|FC|Flat", wavelength:"400-700 nm", ferrule:"FC", endface:"Flat", coupler:"", comments:"" },
 { lookupKey:"400-700 nm|FC|Angled", wavelength:"400-700 nm", ferrule:"FC", endface:"Angled", coupler:"", comments:"" },
-{ lookupKey:"400-700 nm|FC|Endcap Flat", wavelength:"400-700 nm", ferrule:"FC", endface:"Endcap Flat", coupler:"", comments:"" },
+{ lookupKey:"400-700 nm|FC|Endcap Flat", wavelength:"400-700 nm", ferrule:"FC", endface:"Endcap Flat", coupler:"SN: 30-01, CE002855", comments:"" },
 { lookupKey:"400-700 nm|FC|Endcap Angle", wavelength:"400-700 nm", ferrule:"FC", endface:"Endcap Angle", coupler:"", comments:"" },
 
 { lookupKey:"400-700 nm|2.5 mm|Flat", wavelength:"400-700 nm", ferrule:"2.5 mm", endface:"Flat", coupler:"", comments:"" },
@@ -218,13 +213,13 @@ const database = [
 { lookupKey:"400-700 nm|3-3.2 mm|Endcap Flat", wavelength:"400-700 nm", ferrule:"3-3.2 mm", endface:"Endcap Flat", coupler:"", comments:"" },
 { lookupKey:"400-700 nm|3-3.2 mm|Endcap Angle", wavelength:"400-700 nm", ferrule:"3-3.2 mm", endface:"Endcap Angle", coupler:"", comments:"" },
 
-{ lookupKey:"530 nm|1.8 mm|Flat", wavelength:"530 nm", ferrule:"1.8 mm", endface:"Flat", coupler:"", comments:"" },
+{ lookupKey:"530 nm|1.8 mm|Flat", wavelength:"530 nm", ferrule:"1.8 mm", endface:"Flat", coupler:"SN:49-01, SN:91-02, SN:91-01", comments:"SN:91-02, SN:49-01 work well for endcap angle" },
 { lookupKey:"530 nm|1.8 mm|Angled", wavelength:"530 nm", ferrule:"1.8 mm", endface:"Angled", coupler:"", comments:"" },
 { lookupKey:"530 nm|1.8 mm|Endcap Flat", wavelength:"530 nm", ferrule:"1.8 mm", endface:"Endcap Flat", coupler:"", comments:"" },
 { lookupKey:"530 nm|1.8 mm|Endcap Angle", wavelength:"530 nm", ferrule:"1.8 mm", endface:"Endcap Angle", coupler:"", comments:"" },
 
-{ lookupKey:"530 nm|FC|Flat", wavelength:"530 nm", ferrule:"FC", endface:"Flat", coupler:"", comments:"" },
-{ lookupKey:"530 nm|FC|Angled", wavelength:"530 nm", ferrule:"FC", endface:"Angled", coupler:"", comments:"" },
+{ lookupKey:"530 nm|FC|Flat", wavelength:"530 nm", ferrule:"FC", endface:"Flat", coupler:"SN:63-02(S),  SN:63-01(S),  SN:68-01(S),  SN: 09-1,  SN: 89-04,  MTE001986", comments:"SN:63-01 and 68-01 good power but  low ER compared to SN:63-02 with  their respective sources" },
+{ lookupKey:"530 nm|FC|Angled", wavelength:"530 nm", ferrule:"FC", endface:"Angled", coupler:"SN:28-04", comments:"" },
 { lookupKey:"530 nm|FC|Endcap Flat", wavelength:"530 nm", ferrule:"FC", endface:"Endcap Flat", coupler:"", comments:"" },
 { lookupKey:"530 nm|FC|Endcap Angle", wavelength:"530 nm", ferrule:"FC", endface:"Endcap Angle", coupler:"", comments:"" },
 
@@ -240,18 +235,18 @@ const database = [
 
 { lookupKey:"635 nm|1.8 mm|Flat", wavelength:"635 nm", ferrule:"1.8 mm", endface:"Flat", coupler:"", comments:"" },
 { lookupKey:"635 nm|1.8 mm|Angled", wavelength:"635 nm", ferrule:"1.8 mm", endface:"Angled", coupler:"", comments:"" },
-{ lookupKey:"635 nm|1.8 mm|Endcap Flat", wavelength:"635 nm", ferrule:"1.8 mm", endface:"Endcap Flat", coupler:"", comments:"" },
+{ lookupKey:"635 nm|1.8 mm|Endcap Flat", wavelength:"635 nm", ferrule:"1.8 mm", endface:"Endcap Flat", coupler:"SN:90-01,SN:90-02", comments:"SN:90-02, SN:90-01 work well for angle endcap" },
 { lookupKey:"635 nm|1.8 mm|Endcap Angle", wavelength:"635 nm", ferrule:"1.8 mm", endface:"Endcap Angle", coupler:"", comments:"" },
 
-{ lookupKey:"635 nm|FC|Flat", wavelength:"635 nm", ferrule:"FC", endface:"Flat", coupler:"", comments:"" },
+{ lookupKey:"635 nm|FC|Flat", wavelength:"635 nm", ferrule:"FC", endface:"Flat", coupler:"SN:58-01, SN:88-01, SN:30-2, SN:88-02, SN:30-1, SN:61-01 (He-Ne)", comments:"" },
 { lookupKey:"635 nm|FC|Angled", wavelength:"635 nm", ferrule:"FC", endface:"Angled", coupler:"", comments:"" },
 { lookupKey:"635 nm|FC|Endcap Flat", wavelength:"635 nm", ferrule:"FC", endface:"Endcap Flat", coupler:"", comments:"" },
 { lookupKey:"635 nm|FC|Endcap Angle", wavelength:"635 nm", ferrule:"FC", endface:"Endcap Angle", coupler:"", comments:"" },
 
-{ lookupKey:"635 nm|2.5 mm|Flat", wavelength:"635 nm", ferrule:"2.5 mm", endface:"Flat", coupler:"", comments:"" },
+{ lookupKey:"635 nm|2.5 mm|Flat", wavelength:"635 nm", ferrule:"2.5 mm", endface:"Flat", coupler:"SN:89-01, SN:89-02", comments:"" },
 { lookupKey:"635 nm|2.5 mm|Angled", wavelength:"635 nm", ferrule:"2.5 mm", endface:"Angled", coupler:"", comments:"" },
 { lookupKey:"635 nm|2.5 mm|Endcap Flat", wavelength:"635 nm", ferrule:"2.5 mm", endface:"Endcap Flat", coupler:"", comments:"" },
-{ lookupKey:"635 nm|2.5 mm|Endcap Angle", wavelength:"635 nm", ferrule:"2.5 mm", endface:"Endcap Angle", coupler:"", comments:"" },
+{ lookupKey:"635 nm|2.5 mm|Endcap Angle", wavelength:"635 nm", ferrule:"2.5 mm", endface:"Endcap Angle", coupler:"SN:78-01", comments:"Sent for repair" },
 
 { lookupKey:"635 nm|3-3.2 mm|Flat", wavelength:"635 nm", ferrule:"3-3.2 mm", endface:"Flat", coupler:"", comments:"" },
 { lookupKey:"635 nm|3-3.2 mm|Angled", wavelength:"635 nm", ferrule:"3-3.2 mm", endface:"Angled", coupler:"", comments:"" },
@@ -263,7 +258,7 @@ const database = [
 { lookupKey:"600-1000 nm|1.8 mm|Endcap Flat", wavelength:"600-1000 nm", ferrule:"1.8 mm", endface:"Endcap Flat", coupler:"", comments:"" },
 { lookupKey:"600-1000 nm|1.8 mm|Endcap Angle", wavelength:"600-1000 nm", ferrule:"1.8 mm", endface:"Endcap Angle", coupler:"", comments:"" },
 
-{ lookupKey:"600-1000 nm|FC|Flat", wavelength:"600-1000 nm", ferrule:"FC", endface:"Flat", coupler:"", comments:"" },
+{ lookupKey:"600-1000 nm|FC|Flat", wavelength:"600-1000 nm", ferrule:"FC", endface:"Flat", coupler:"SN:94-01", comments:"" },
 { lookupKey:"600-1000 nm|FC|Angled", wavelength:"600-1000 nm", ferrule:"FC", endface:"Angled", coupler:"", comments:"" },
 { lookupKey:"600-1000 nm|FC|Endcap Flat", wavelength:"600-1000 nm", ferrule:"FC", endface:"Endcap Flat", coupler:"", comments:"" },
 { lookupKey:"600-1000 nm|FC|Endcap Angle", wavelength:"600-1000 nm", ferrule:"FC", endface:"Endcap Angle", coupler:"", comments:"" },
@@ -278,17 +273,17 @@ const database = [
 { lookupKey:"600-1000 nm|3-3.2 mm|Endcap Flat", wavelength:"600-1000 nm", ferrule:"3-3.2 mm", endface:"Endcap Flat", coupler:"", comments:"" },
 { lookupKey:"600-1000 nm|3-3.2 mm|Endcap Angle", wavelength:"600-1000 nm", ferrule:"3-3.2 mm", endface:"Endcap Angle", coupler:"", comments:"" },
 
-{ lookupKey:"780 nm|1.8 mm|Flat", wavelength:"780 nm", ferrule:"1.8 mm", endface:"Flat", coupler:"", comments:"" },
+{ lookupKey:"780 nm|1.8 mm|Flat", wavelength:"780 nm", ferrule:"1.8 mm", endface:"Flat", coupler:"SN:98-01", comments:"" },
 { lookupKey:"780 nm|1.8 mm|Angled", wavelength:"780 nm", ferrule:"1.8 mm", endface:"Angled", coupler:"", comments:"" },
 { lookupKey:"780 nm|1.8 mm|Endcap Flat", wavelength:"780 nm", ferrule:"1.8 mm", endface:"Endcap Flat", coupler:"", comments:"" },
 { lookupKey:"780 nm|1.8 mm|Endcap Angle", wavelength:"780 nm", ferrule:"1.8 mm", endface:"Endcap Angle", coupler:"", comments:"" },
 
-{ lookupKey:"780 nm|FC|Flat", wavelength:"780 nm", ferrule:"FC", endface:"Flat", coupler:"", comments:"" },
+{ lookupKey:"780 nm|FC|Flat", wavelength:"780 nm", ferrule:"FC", endface:"Flat", coupler:"SN:06-01R(S), SN:17-01R2(S)", comments:"SN:65-2, SN:27-01 , SN:06-01R work well for airgap FC angle endcap" },
 { lookupKey:"780 nm|FC|Angled", wavelength:"780 nm", ferrule:"FC", endface:"Angled", coupler:"", comments:"" },
 { lookupKey:"780 nm|FC|Endcap Flat", wavelength:"780 nm", ferrule:"FC", endface:"Endcap Flat", coupler:"", comments:"" },
 { lookupKey:"780 nm|FC|Endcap Angle", wavelength:"780 nm", ferrule:"FC", endface:"Endcap Angle", coupler:"", comments:"" },
 
-{ lookupKey:"780 nm|2.5 mm|Flat", wavelength:"780 nm", ferrule:"2.5 mm", endface:"Flat", coupler:"", comments:"" },
+{ lookupKey:"780 nm|2.5 mm|Flat", wavelength:"780 nm", ferrule:"2.5 mm", endface:"Flat", coupler:"SN:65-2, SN:27-01", comments:"SN:65-2, SN:27-01 , SN:06-01R work well for airgap FC angle endcap" },
 { lookupKey:"780 nm|2.5 mm|Angled", wavelength:"780 nm", ferrule:"2.5 mm", endface:"Angled", coupler:"", comments:"" },
 { lookupKey:"780 nm|2.5 mm|Endcap Flat", wavelength:"780 nm", ferrule:"2.5 mm", endface:"Endcap Flat", coupler:"", comments:"" },
 { lookupKey:"780 nm|2.5 mm|Endcap Angle", wavelength:"780 nm", ferrule:"2.5 mm", endface:"Endcap Angle", coupler:"", comments:"" },
