@@ -1,374 +1,395 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Optical Fiber Coupler Selector</title>
 
 <style>
 
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 body{
-  font-family:"Segoe UI",Arial,sans-serif;
-  background:#eef2f7;
-  padding:12px;
-  color:#1c2733;
+    font-family:"Segoe UI", Arial, sans-serif;
+    background:#eef2f7;
+    padding:12px;
+    color:#1c2733;
 }
 
 .container{
-  max-width:900px;
-  margin:auto;
-  background:white;
-  border-radius:14px;
-  overflow:hidden;
-  box-shadow:0 4px 18px rgba(0,0,0,0.12);
+    max-width:950px;
+    margin:auto;
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 4px 20px rgba(0,0,0,0.12);
 }
 
 .header{
-  background:#12395b;
-  color:white;
-  padding:20px;
-  text-align:center;
+    background:#12395b;
+    color:white;
+    padding:24px 18px;
+    text-align:center;
 }
 
 .header h1{
-  font-size:24px;
-  line-height:1.3;
-  margin-bottom:6px;
+    font-size:32px;
+    line-height:1.2;
+    margin-bottom:6px;
 }
 
 .header p{
-  opacity:0.9;
-  font-size:14px;
+    opacity:0.9;
+    font-size:15px;
 }
 
 .content{
-  padding:18px;
+    padding:18px;
 }
 
 .grid{
-  display:grid;
-  grid-template-columns:1fr;
-  gap:14px;
-}
-
-.field{
-  display:flex;
-  flex-direction:column;
-  gap:6px;
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:16px 18px;
+    align-items:center;
 }
 
 label{
-  font-weight:600;
-  font-size:14px;
-  color:#12395b;
+    font-weight:600;
+    color:#12395b;
+    font-size:15px;
 }
 
 select{
-  width:100%;
-  padding:14px;
-  border-radius:10px;
-  border:1px solid #c7d0db;
-  background:white;
-  font-size:16px;
-  min-height:48px;
-  outline:none;
-  transition:0.2s;
+    width:100%;
+    min-height:50px;
+    padding:12px 14px;
+    border-radius:10px;
+    border:1px solid #c6cfdb;
+    font-size:16px;
+    background:white;
+    outline:none;
+    transition:0.2s;
 }
 
 select:focus{
-  border-color:#12395b;
-  box-shadow:0 0 0 3px rgba(18,57,91,0.15);
+    border-color:#12395b;
+    box-shadow:0 0 0 3px rgba(18,57,91,0.15);
+}
+
+select:disabled{
+    background:#f1f3f5;
+    color:#888;
 }
 
 .result-section{
-  margin-top:20px;
+    margin-top:24px;
 }
 
 .result-title{
-  background:#12395b;
-  color:white;
-  padding:12px 14px;
-  font-weight:600;
-  border-radius:10px 10px 0 0;
-  font-size:15px;
+    background:#12395b;
+    color:white;
+    padding:12px 14px;
+    font-weight:600;
+    border-radius:10px 10px 0 0;
+    font-size:15px;
 }
 
 .result-box{
-  background:#edf7e9;
-  border:1px solid #d1d8cf;
-  border-top:none;
-  padding:16px;
-  min-height:70px;
-  border-radius:0 0 10px 10px;
-  font-size:14px;
-  line-height:1.6;
-  overflow-wrap:break-word;
-  white-space:pre-line;
-}
-
-.footer{
-  padding:16px;
-  text-align:center;
-  color:#667;
-  font-size:12px;
+    background:#edf7e9;
+    border:1px solid #d5ddd2;
+    border-top:none;
+    padding:18px;
+    min-height:100px;
+    border-radius:0 0 10px 10px;
+    line-height:1.7;
+    font-size:15px;
+    overflow-wrap:break-word;
+    white-space:pre-line;
 }
 
 .badge{
-  display:inline-block;
-  background:#12395b;
-  color:white;
-  padding:4px 10px;
-  border-radius:20px;
-  font-size:12px;
-  margin-bottom:8px;
+    display:inline-block;
+    background:#12395b;
+    color:white;
+    padding:4px 10px;
+    border-radius:20px;
+    font-size:12px;
+    margin-bottom:10px;
 }
 
 .empty{
-  color:#777;
+    color:#777;
 }
 
-@media (min-width:768px){
+.footer{
+    text-align:center;
+    padding:18px;
+    color:#666;
+    font-size:13px;
+}
 
-  .grid{
-    grid-template-columns:220px 1fr;
-    align-items:center;
-  }
+@media (max-width:768px){
 
-  .field{
-    display:contents;
-  }
+    body{
+        padding:8px;
+    }
 
-  .header h1{
-    font-size:30px;
-  }
+    .header{
+        padding:18px 14px;
+    }
 
-  .header p{
-    font-size:15px;
-  }
+    .header h1{
+        font-size:22px;
+    }
+
+    .header p{
+        font-size:13px;
+    }
+
+    .content{
+        padding:14px;
+    }
+
+    .grid{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
+
+    label{
+        margin-top:4px;
+    }
+
+    .result-box{
+        min-height:80px;
+        font-size:14px;
+    }
 
 }
 
 @media (prefers-color-scheme: dark){
 
-  body{
-    background:#101418;
-    color:#f2f2f2;
-  }
+    body{
+        background:#101418;
+        color:#f2f2f2;
+    }
 
-  .container{
-    background:#1b222c;
-  }
+    .container{
+        background:#1c232d;
+    }
 
-  label{
-    color:#d7e6f5;
-  }
+    label{
+        color:#dbe7f5;
+    }
 
-  select{
-    background:#2a3440;
-    color:white;
-    border:1px solid #4b5663;
-  }
+    select{
+        background:#2b3440;
+        color:white;
+        border:1px solid #4d5967;
+    }
 
-  .result-box{
-    background:#26303a;
-    border-color:#3e4a57;
-    color:white;
-  }
+    select:disabled{
+        background:#232b35;
+    }
 
-  .footer{
-    color:#b9c0c8;
-  }
+    .result-box{
+        background:#26303a;
+        border-color:#42505e;
+        color:white;
+    }
+
+    .footer{
+        color:#b9c0c8;
+    }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="container">
 
-  <div class="header">
-    <h1>OPTICAL FIBER COUPLER SELECTOR</h1>
-    <p>Industrial Fiber Patch Cord Coupler Recommendation System</p>
-  </div>
+    <div class="header">
+        <h1>OPTICAL FIBER COUPLER SELECTOR</h1>
+        <p>Industrial Fiber Patch Cord Coupler Recommendation System</p>
+    </div>
 
-  <div class="content">
+    <div class="content">
 
-    <div class="grid">
+        <div class="grid">
 
-      <div class="field">
-        <label for="wavelength">Laser Wavelength</label>
-        <select id="wavelength">
-          <option value="">Select Wavelength</option>
-        </select>
-      </div>
+            <label for="wavelength">
+                Laser Wavelength
+            </label>
 
-      <div class="field">
-        <label for="ferrule">Patch Cord Termination</label>
-        <select id="ferrule" disabled>
-          <option value="">Select Ferrule</option>
-        </select>
-      </div>
+            <select id="wavelength">
+                <option value="">Select Wavelength</option>
+            </select>
 
-      <div class="field">
-        <label for="endface">End Face Type</label>
-        <select id="endface" disabled>
-          <option value="">Select End Face</option>
-        </select>
-      </div>
+            <label for="ferrule">
+                Patch Cord Termination
+            </label>
+
+            <select id="ferrule" disabled>
+                <option value="">Select Ferrule</option>
+            </select>
+
+            <label for="endface">
+                End Face Type
+            </label>
+
+            <select id="endface" disabled>
+                <option value="">Select End Face</option>
+            </select>
+
+        </div>
+
+        <div class="result-section">
+
+            <div class="result-title">
+                Recommended Coupler
+            </div>
+
+            <div class="result-box" id="couplerResult">
+                <span class="empty">
+                    Waiting for complete selection...
+                </span>
+            </div>
+
+        </div>
+
+        <div class="result-section">
+
+            <div class="result-title">
+                Technical Comments / Notes
+            </div>
+
+            <div class="result-box" id="commentResult">
+                <span class="empty">
+                    Waiting for complete selection...
+                </span>
+            </div>
+
+        </div>
 
     </div>
 
-    <div class="result-section">
-
-      <div class="result-title">
-        Recommended Coupler
-      </div>
-
-      <div class="result-box" id="couplerResult">
-        <span class="empty">
-          Waiting for complete selection...
-        </span>
-      </div>
-
+    <div class="footer">
+        Optical Fiber Laboratory Coupler Recommendation Tool
     </div>
-
-    <div class="result-section">
-
-      <div class="result-title">
-        Technical Comments / Notes
-      </div>
-
-      <div class="result-box" id="commentResult">
-        <span class="empty">
-          Waiting for complete selection...
-        </span>
-      </div>
-
-    </div>
-
-  </div>
-
-  <div class="footer">
-    Optical Fiber Laboratory Coupler Recommendation Tool
-  </div>
 
 </div>
 
 <script>
 
-/*
-  IMPORTANT:
-  For best performance on mobile,
-  move this database into a separate database.js file later.
-
-  Example:
-  <script src="database.js"></script>
-*/
+/* ======================================================
+   DATABASE
+====================================================== */
 
 const database = [
 
 {
-  wavelength:"405 nm",
-  ferrule:"FC",
-  endface:"Flat",
-  coupler:"SN:35-1R2(S), SN:91-01R, SN:87-01, CE002855",
-  comments:""
+    wavelength:"405 nm",
+    ferrule:"FC",
+    endface:"Flat",
+    coupler:"SN:35-1R2(S), SN:91-01R, SN:87-01, CE002855",
+    comments:""
 },
 
 {
-  wavelength:"405 nm",
-  ferrule:"FC",
-  endface:"Endcap Angle",
-  coupler:"SN:50-01",
-  comments:""
+    wavelength:"405 nm",
+    ferrule:"FC",
+    endface:"Endcap Angle",
+    coupler:"SN:50-01",
+    comments:""
 },
 
 {
-  wavelength:"488 nm",
-  ferrule:"FC",
-  endface:"Flat",
-  coupler:"SN:93-1R3(S)",
-  comments:""
+    wavelength:"488 nm",
+    ferrule:"FC",
+    endface:"Flat",
+    coupler:"SN:93-1R3(S)",
+    comments:""
 },
 
 {
-  wavelength:"530 nm",
-  ferrule:"FC",
-  endface:"Flat",
-  coupler:"SN:63-02(S), SN:63-01(S), SN:68-01(S)",
-  comments:"SN:63-01 and 68-01 provide high power."
+    wavelength:"530 nm",
+    ferrule:"FC",
+    endface:"Flat",
+    coupler:"SN:63-02(S), SN:63-01(S), SN:68-01(S)",
+    comments:"SN:63-01 and SN:68-01 provide high power."
 },
 
 {
-  wavelength:"635 nm",
-  ferrule:"FC",
-  endface:"Flat",
-  coupler:"SN:58-01, SN:88-01, SN:30-2",
-  comments:""
+    wavelength:"635 nm",
+    ferrule:"FC",
+    endface:"Flat",
+    coupler:"SN:58-01, SN:88-01, SN:30-2",
+    comments:""
 },
 
 {
-  wavelength:"780 nm",
-  ferrule:"FC",
-  endface:"Flat",
-  coupler:"SN:06-01R(S), SN:17-01R2(S)",
-  comments:"Works well for airgap FC angle endcap."
+    wavelength:"780 nm",
+    ferrule:"FC",
+    endface:"Flat",
+    coupler:"SN:06-01R(S), SN:17-01R2(S)",
+    comments:"Works well for airgap FC angle endcap."
 },
 
 {
-  wavelength:"850 nm",
-  ferrule:"FC",
-  endface:"Flat",
-  coupler:"SN:49-1R(S)",
-  comments:""
+    wavelength:"850 nm",
+    ferrule:"FC",
+    endface:"Flat",
+    coupler:"SN:49-1R(S)",
+    comments:""
 },
 
 {
-  wavelength:"980 nm",
-  ferrule:"FC",
-  endface:"Flat",
-  coupler:"57-03R",
-  comments:""
+    wavelength:"980 nm",
+    ferrule:"FC",
+    endface:"Flat",
+    coupler:"57-03R",
+    comments:""
 },
 
 {
-  wavelength:"1060 nm",
-  ferrule:"FC",
-  endface:"Flat",
-  coupler:"SN:58-02(S), SN:61-01(S), SN:99-02(S)",
-  comments:""
+    wavelength:"1060 nm",
+    ferrule:"FC",
+    endface:"Flat",
+    coupler:"SN:58-02(S), SN:61-01(S), SN:99-02(S)",
+    comments:""
 },
 
 {
-  wavelength:"1310 nm",
-  ferrule:"FC",
-  endface:"Flat",
-  coupler:"SN:00-05",
-  comments:""
+    wavelength:"1310 nm",
+    ferrule:"FC",
+    endface:"Flat",
+    coupler:"SN:00-05",
+    comments:""
 },
 
 {
-  wavelength:"1550 nm",
-  ferrule:"FC",
-  endface:"Flat",
-  coupler:"SN:02-9R2(S), SN:49-1(S)",
-  comments:""
+    wavelength:"1550 nm",
+    ferrule:"FC",
+    endface:"Flat",
+    coupler:"SN:02-9R2(S), SN:49-1(S)",
+    comments:""
 }
 
 ];
 
-/* =========================
+/* ======================================================
    ELEMENTS
-========================= */
+====================================================== */
 
 const wavelengthSelect = document.getElementById("wavelength");
 const ferruleSelect = document.getElementById("ferrule");
@@ -377,198 +398,209 @@ const endfaceSelect = document.getElementById("endface");
 const couplerResult = document.getElementById("couplerResult");
 const commentResult = document.getElementById("commentResult");
 
-/* =========================
-   UTILITIES
-========================= */
+/* ======================================================
+   FUNCTIONS
+====================================================== */
 
 function unique(values){
-  return [...new Set(values)];
+
+    return [...new Set(values)];
+
 }
 
 function populateSelect(select, values, placeholder){
 
-  select.innerHTML = "";
+    select.innerHTML = "";
 
-  const defaultOption = document.createElement("option");
-  defaultOption.value = "";
-  defaultOption.textContent = placeholder;
+    const defaultOption = document.createElement("option");
 
-  select.appendChild(defaultOption);
+    defaultOption.value = "";
+    defaultOption.textContent = placeholder;
 
-  values.forEach(value => {
+    select.appendChild(defaultOption);
 
-    const option = document.createElement("option");
+    values.forEach(value => {
 
-    option.value = value;
-    option.textContent = value;
+        const option = document.createElement("option");
 
-    select.appendChild(option);
+        option.value = value;
+        option.textContent = value;
 
-  });
+        select.appendChild(option);
+
+    });
 
 }
 
 function resetResults(){
 
-  couplerResult.innerHTML =
-    `<span class="empty">Waiting for complete selection...</span>`;
+    couplerResult.innerHTML =
+        `<span class="empty">Waiting for complete selection...</span>`;
 
-  commentResult.innerHTML =
-    `<span class="empty">Waiting for complete selection...</span>`;
+    commentResult.innerHTML =
+        `<span class="empty">Waiting for complete selection...</span>`;
 
 }
 
-/* =========================
+/* ======================================================
    INITIALIZE WAVELENGTHS
-========================= */
+====================================================== */
 
 const wavelengths = unique(
-  database.map(item => item.wavelength)
+    database.map(item => item.wavelength)
 );
 
 populateSelect(
-  wavelengthSelect,
-  wavelengths,
-  "Select Wavelength"
+    wavelengthSelect,
+    wavelengths,
+    "Select Wavelength"
 );
 
-/* =========================
-   STEP 1
-========================= */
+/* ======================================================
+   WAVELENGTH SELECTION
+====================================================== */
 
 wavelengthSelect.addEventListener("change", () => {
 
-  const wavelength = wavelengthSelect.value;
+    const wavelength = wavelengthSelect.value;
 
-  resetResults();
+    resetResults();
 
-  ferruleSelect.disabled = true;
-  endfaceSelect.disabled = true;
+    ferruleSelect.disabled = true;
+    endfaceSelect.disabled = true;
 
-  populateSelect(
-    ferruleSelect,
-    [],
-    "Select Ferrule"
-  );
+    populateSelect(
+        ferruleSelect,
+        [],
+        "Select Ferrule"
+    );
 
-  populateSelect(
-    endfaceSelect,
-    [],
-    "Select End Face"
-  );
+    populateSelect(
+        endfaceSelect,
+        [],
+        "Select End Face"
+    );
 
-  if(!wavelength) return;
+    if(!wavelength) return;
 
-  const ferrules = unique(
-    database
-      .filter(item => item.wavelength === wavelength)
-      .map(item => item.ferrule)
-  );
+    const ferrules = unique(
 
-  populateSelect(
-    ferruleSelect,
-    ferrules,
-    "Select Ferrule"
-  );
+        database
+        .filter(item => item.wavelength === wavelength)
+        .map(item => item.ferrule)
 
-  ferruleSelect.disabled = false;
+    );
+
+    populateSelect(
+        ferruleSelect,
+        ferrules,
+        "Select Ferrule"
+    );
+
+    ferruleSelect.disabled = false;
 
 });
 
-/* =========================
-   STEP 2
-========================= */
+/* ======================================================
+   FERRULE SELECTION
+====================================================== */
 
 ferruleSelect.addEventListener("change", () => {
 
-  const wavelength = wavelengthSelect.value;
-  const ferrule = ferruleSelect.value;
+    const wavelength = wavelengthSelect.value;
+    const ferrule = ferruleSelect.value;
 
-  resetResults();
+    resetResults();
 
-  endfaceSelect.disabled = true;
+    endfaceSelect.disabled = true;
 
-  populateSelect(
-    endfaceSelect,
-    [],
-    "Select End Face"
-  );
+    populateSelect(
+        endfaceSelect,
+        [],
+        "Select End Face"
+    );
 
-  if(!ferrule) return;
+    if(!ferrule) return;
 
-  const endfaces = unique(
-    database
-      .filter(item =>
-        item.wavelength === wavelength &&
-        item.ferrule === ferrule
-      )
-      .map(item => item.endface)
-  );
+    const endfaces = unique(
 
-  populateSelect(
-    endfaceSelect,
-    endfaces,
-    "Select End Face"
-  );
+        database
+        .filter(item =>
 
-  endfaceSelect.disabled = false;
+            item.wavelength === wavelength &&
+            item.ferrule === ferrule
+
+        )
+        .map(item => item.endface)
+
+    );
+
+    populateSelect(
+        endfaceSelect,
+        endfaces,
+        "Select End Face"
+    );
+
+    endfaceSelect.disabled = false;
 
 });
 
-/* =========================
-   STEP 3
-========================= */
+/* ======================================================
+   END FACE SELECTION
+====================================================== */
 
 endfaceSelect.addEventListener("change", () => {
 
-  const wavelength = wavelengthSelect.value;
-  const ferrule = ferruleSelect.value;
-  const endface = endfaceSelect.value;
+    const wavelength = wavelengthSelect.value;
+    const ferrule = ferruleSelect.value;
+    const endface = endfaceSelect.value;
 
-  if(!endface){
+    if(!endface){
 
-    resetResults();
-    return;
+        resetResults();
+        return;
 
-  }
+    }
 
-  const match = database.find(item =>
+    const match = database.find(item =>
 
-    item.wavelength === wavelength &&
-    item.ferrule === ferrule &&
-    item.endface === endface
+        item.wavelength === wavelength &&
+        item.ferrule === ferrule &&
+        item.endface === endface
 
-  );
+    );
 
-  if(match){
+    if(match){
 
-    couplerResult.innerHTML = `
+        couplerResult.innerHTML = `
 
-      <div class="badge">Recommended</div>
+            <div class="badge">
+                Recommended
+            </div>
 
-      <div>
-        ${match.coupler || "No coupler available."}
-      </div>
+            <div>
+                ${match.coupler || "No coupler available."}
+            </div>
 
-    `;
+        `;
 
-    commentResult.innerHTML =
+        commentResult.innerHTML =
 
-      match.comments
-      ? match.comments
-      : `<span class="empty">No comments available.</span>`;
+            match.comments
+            ? match.comments
+            : `<span class="empty">No comments available.</span>`;
 
-  }
+    }
 
-  else{
+    else{
 
-    couplerResult.innerHTML =
-      `<span class="empty">No matching coupler found.</span>`;
+        couplerResult.innerHTML =
+            `<span class="empty">No matching coupler found.</span>`;
 
-    commentResult.innerHTML =
-      `<span class="empty">No comments available.</span>`;
+        commentResult.innerHTML =
+            `<span class="empty">No comments available.</span>`;
 
-  }
+    }
 
 });
 
